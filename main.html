@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <title>Resume Generator</title>
+</head>
+<body>
+
+
+<div class="container" >
+   
+    
+    <div class="row" id="cv">
+        <h1 class="text-center">Resume Generator</h1>
+        <hr>
+        <div class="col-md-6">
+          <h3>Personal Information</h3>
+          
+
+        <div class="form-group">
+         <label for="nameField">Your Name</label>
+         <input type="text" id="nameField" 
+         placeholder="Enter Name"
+         class="form-control"
+         />
+
+         <div class="form-group mt-2" >
+            <label for="contactField">Your Contact</label>
+            <input type="text" id="contactField" 
+            placeholder="Enter Name"
+            class="form-control"
+            />
+
+          </div>
+
+        
+
+          <div class="form-group mt-2" >
+            <label for="addressField">Your Address</label>
+            <textarea  id="addressField" 
+            placeholder="Enter Name"
+            class="form-control"
+            rows="2"
+            ></textarea>
+             <!-- for photo -->
+            <div>
+              <label for="">Choose the photo</label>
+              <input type="file" id="photo"/>
+            </div>
+            
+
+            <p class="text=secondry my-3">Important 
+                 Links</p>
+
+            <div class="form-group mt-2" >
+                <label for="fbtField">facebook</label>
+                <input type="text" id="fbtField" 
+                placeholder="Enter Name"
+                class="form-control"
+                />
+    
+              </div>
+
+
+              <div class="form-group mt-2" >
+                <label for="fbtField">Instagram</label>
+                <input type="text" id="instaField" 
+                placeholder="Enter Name"
+                class="form-control"
+                />
+    
+              </div>
+
+
+              <div class="form-group mt-2" >
+                <label for="linkdinField">Linkdin</label>
+                <input type="text" id="linkdinField" 
+                placeholder="Enter Name"
+                class="form-control"
+                />
+    
+              </div>
+
+              <div class="form-group mt-2" >
+                <label for="gitField">Github</label>
+                <input type="text" id="gitField" 
+                placeholder="Enter Name"
+                class="form-control"
+                />
+    
+              </div>
+
+              
+          </div>
+         
+        </div>
+       
+
+      </div>
+      <div class="col-md-6">
+        <h3>Professional Information</h3>
+
+        <div class="form-group mt-2">
+            <label for="">summery</label>
+            <textarea type="text"
+             placeholder="Enter here " 
+             id="summeryField"
+              class="form-control"
+            rows="3"
+            ></textarea>
+        
+            <div class="container text-center mt=2">
+               
+            
+            </div>
+        </div>
+
+        <!-- Skills -->
+     <!-- 
+        <div class="form-group mt-2" id="skill">
+          <label for="">Skills</label>
+          <textarea type="text" placeholder="Enter here "
+          id="skillField"
+           class="form-control weField" 
+          rows="3"
+          ></textarea>
+      
+          <div class="container text-center mt-2 " id="skillAddButton">
+            
+          </div>
+      
+          <div class="container text-center mt=2">
+              <button  onclick="addNewSkillField()" class="btn btn-primary">Add</button>
+          
+          </div>
+      </div> -->
+
+  <div class="form-group mt-2" id="we">
+    <label for="">Work Experience</label>
+    <textarea type="text" placeholder="Enter here "
+    id="weField"
+     class="form-control weField" 
+    rows="3"
+    ></textarea>
+
+    <div class="container text-center mt-2 " id="weAddButton">
+        <!-- <button onclick="addNewField()"></button>
+        Add -->
+    </div>
+
+    <div class="container text-center mt=2">
+        <button  onclick="addNewWEField()" class="btn btn-primary">Add</button>
+    
+    </div>
+</div>
+
+
+
+  <div class="form-group mt-2" id="aq">
+      <label for="">Academic Qulification</label>
+      <textarea type="text" placeholder="Enter here " class="form-control aqField"
+      rows="3"
+      ></textarea>
+
+      <div class="container text-center mt-2" id="aqAddButton">
+          <button onclick="addAQNewField()" class="btn btn-primary 
+          btn-sm">Add</button>
+      
+      </div>
+
+
+
+      <!-- projects -->
+      <div class="form-group mt-2" id="p">
+        <label for="">Projects</label>
+        <textarea type="text" placeholder="Enter here " class="form-control pField"
+        rows="3"
+        ></textarea>
+  
+        <div class="container text-center mt-2" id="pAddButton">
+            <button onclick="addNewPField()" class="btn btn-primary 
+            btn-sm">Add</button>
+        
+        </div>
+</div>
+
+
+<!-- skills -->
+
+<!-- <div class="form-group mt-2" id="s">
+  <label for="">Projects</label>
+  <textarea type="text" placeholder="Enter here " class="form-control skField"
+  rows="3"
+  ></textarea>
+
+  <div class="container text-center mt-2" id="skillAddButton">
+      <button onclick=" addNewSkillField()" class="btn btn-primary 
+      btn-sm">Add</button>
+  
+  </div>
+</div> -->
+
+</div>
+
+
+
+
+      </div>
+      <div class="container text-center mt-3">
+        <button id="generate-cv"  onclick="generateCV()" class="btn btn-primary btn-lg"><a href="#templete">Generate CV</a></button>
+        
+    </div>
+    
+    </div> 
+      <!-- CV Templete -->
+    <div class="container" id="templete">
+
+       
+        <div class="row">
+
+          <div class="col-md-4 profile" id="column1" >
+            <!-- first col -->
+            
+            <!-- for photo -->
+          <img src="Profile_Photo.jpg" 
+           id="img"/>
+          <div>
+            <label>Name</label>
+           <p id="nameT1"></p>
+           <label>Contact</label>
+           <p id="contactT"></p>
+           <label>Address</label>
+           <p id="addressT"></p>
+           <hr/>
+
+           <label>facebook</label>
+           <p><a id="fbT" href="#">facebook.com</a></p>
+           
+           <label>Instagram</label>
+               <p><a id="instaT" href="#">instagram.com</a></p>
+
+               <label>Linkdin</label>
+                 <p><a id="linkdT" href="">linkdin.com</a></p>
+
+                    <label>Github</label>
+                 <p><a id="git" 
+                  href="">github.com</a></p>
+                  </div>
+
+
+                     
+                      
+  
+                    
+                   </div>
+
+                   <div class="col-md-8 py-5">
+                    <!-- second col -->
+                    <h1 id="nameT2" class="text-center" style="font-weight: 
+                      980">Name</h1>
+                    <!-- Summery card -->
+                    <div class="card">
+                      <div class="card-header">
+                        <h3>Summery</h3>
+
+                      </div>
+
+                      <div class="card-body mt-4">
+                        <p id="summeryT"></p>
+                      </div>
+
+                    </div>
+
+                        
+                   
+                     
+
+                  
+
+
+                    <!-- work experience -->
+                    <div class="card">
+                      <div class="card-header">
+                        <h3>Work Experence</h3>
+                     
+                      </div>
+
+                      <div class="card-body mt-4">
+                       <ul id="weT">
+                        <li></li>
+                        <li></li>
+                      
+                       </ul>
+                      </div>
+
+                    </div>
+
+                    <!-- Academic Qualification -->
+                    <div class="card">
+                      <div class="card-header">
+                        <h3>Academic Qualification</h3>
+
+                      </div>
+
+                      <div class="card-body mt-4">
+                       <ul id="aqT">
+                        <li></li>
+                        <li></li>
+                        
+                       </ul>
+                      </div>
+
+                    </div>
+                     <!-- Projects -->
+                     
+                     <div class="card">
+                      <div class="card-header">
+                        <h3>Projects</h3>
+
+
+                      </div>
+
+                      <div class="card-body mt-4">
+                       <ul id="pt">
+                        <li></li>
+                        <li></li>
+                        
+                       </ul>
+                      </div>
+
+                    </div>
+                   <!-- skills -->
+
+                   <!-- <div class="card">
+                    <div class="card-header">
+                      <h3>Projects</h3>
+
+
+                    </div>
+
+                    <div class="card-body mt-4">
+                     <ul id="sk">
+                      <li></li>
+                      <li></li>
+                      
+                     </ul>
+                    </div> -->
+
+
+                    <div >
+                      <button onclick="print()"  id="save-btn">Print CV</button>
+                    </div> 
+                       
+            </div>
+        </div>
+      
+   
+</div>      
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+<script src="script.js">
+ 
+
+</script>
+
+</body>
+</html>

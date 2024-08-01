@@ -1,0 +1,66 @@
+
+
+.row hr{
+    size: 1rem;
+    background-color: red;
+  }
+  .card-header{
+    background-color: rgb(222, 181, 105);
+
+  }
+#generate-cv a{
+  color:#fff;
+  text-decoration: none;
+  font-size: 30px;  
+  position: relative;
+  text-shadow: #ff004f;
+}
+  
+
+
+  /*#templete{
+    display: none;
+  } */
+  #save-btn{
+  
+   background-color: rgb(222, 181, 105);
+   margin-top: 2rem;
+   margin-left: 10rem;
+   
+   border-radius: 1rem;
+  font-size: large;
+  
+  }
+#cv{
+
+     background-color:rgb(186, 135, 237);
+     /* display: none; */
+}
+
+#img{
+   margin-top: 3rem;
+    border: 1px solid;
+    width: 150px;
+    border-radius: 50%;
+
+
+}
+#column1{
+  margin-bottom: 7rem;
+  margin-top: 3.5rem;
+}
+.profile{
+  background-color:rgb(222, 181, 105);
+ text-align: center;
+ 
+
+}
+#photo{
+  margin-top: 2rem;
+}
+
+#generate-cv{
+  margin-right: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
